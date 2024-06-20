@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: youyou;
+    src: url(./fonts/又又意宋.ttf);
+}
+
+.head{
+    background: white;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 2;
+}
+
+.header{
+    
+    background: url(./img/header.jpg)no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100vh;
+}
+.contents{
+    width: 90%;
+    height: 4500px;
+    position: absolute;
+    top:90vh;
+    left: 5%;
+    background: white;
+}
+
+.labels{
+    width:60%;
+    height: 8vh;
+    position: absolute;
+    right:0% ;
+    display: flex;
+    color: rgba(38, 38, 38, 0.7);
+    font-family: "youyou";
+    font-size: 45px;
+}
+
+
+.neck{
+    width: 100%;
+    height: 130vh;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top:70vh;
+    border-radius: 17% 17% 0% 0%;
+}
+
+.label{
+    margin-right: 28px;
+    margin-left: 28px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.neckline{
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 3px 0 0 rgba(0, 255, 4, 0.4),-3px 0 0 rgba(246, 255, 0, 0.4);
+    font-family:"youyou";
+    font-size: 30px;
+    top:80px;
+}
+
+@keyframes hueRotate{
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
+.search-box{
+    width:500px;
+    height: 40px;
+    top: 40px;
+    left: 300px;
+    position: absolute;
+    transition: 0.4s;
+    transform: translate(-50%,-50%);
+    border-radius: 40px;
+    background: linear-gradient(45deg,rgba(255, 249, 129,0.8),rgba(255, 158, 215,0.8),rgba(93, 255, 104,0.8),rgba(66, 170, 255,0.8));
+    padding: 10px;
+    animation: hueRotate 8s infinite alternate;
+    overflow: hidden;
+}
+
+.search-box input{
+    background: none;
+    border: none;
+    float: right;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 40px;
+    padding: 0;
+    outline: none;
+    color: white;
+    width: 440px;
+    position: relative;
+    font-family: "youyou";
+    border-radius: 40px;
+}
+
+.search-box input::-webkit-input-placeholder{
+    color: white;
+}
+
+.search-box a{
+    color: brown;
+    background: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    transition: 0.4s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    float: left;
+}
+
+
+
+.shell {
+    width: 100px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(17, 24, 39);
+    border-radius: 10px;
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+.box {
+    display: block;
+    height: 15%;
+    width: 85%;
+    margin: 9px;
+    border-radius: 5px;
+    position: relative;
+    transition: .3s;
+    color: rgb(160, 160, 175);
+}
+.box i {
+    font-size: 60px;
+    position: absolute;
+    margin: 7px 0 0 13px;
+}
+
+.box:nth-child(1)::before,
+.box:nth-child(5)::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(55, 65, 81);
+    position: absolute;
+    bottom: -10px;
+}
+
+.box span{
+    position: relative;
+    top: 22px;
+    left: 80px;
+    font: 500 20px '';
+    opacity: 0;
+    transition: .1s;
+    font-family: "youyou";
+}
+.shell:hover{
+    width: 270px;
+}
+.box:hover{
+    background-color: rgb(55, 65, 81);
+}
+.shell:hover span{
+    opacity: 1;
+}
+.box:hover{
+    color: #ffffff;
+}
+
+.shell:nth-child(2) {
+    background-color: rgb(243, 244, 246);
+}
+.shell:nth-child(2) .box:hover{
+    background-color: rgb(209, 213, 219);
+    color: rgb(241, 159, 159);
+}
+.shell:nth-child(2) .box{
+    color: #000;
+}
+
+.shell:nth-child(3) {
+    background-color: rgb(49,46,129);
+}
+.shell:nth-child(3) .box:hover{
+    background-color: rgb(67, 56, 202);
+}
+.shell:nth-child(3) .box{
+    color: rgb(140, 120, 240);
+} 
+
+.bottom{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top:5500px;
+    background: white;
+}
+
